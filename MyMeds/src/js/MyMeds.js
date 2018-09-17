@@ -23,20 +23,20 @@
                   });
 
 				  
-		 var medorder = smart.patient.api.fetchAll({
-                    type: 'MedicationOrder'
-		 })
+	//	 var medorder = smart.patient.api.fetchAll({
+      //              type: 'MedicationOrder'
+		// })
 		
 
         $.when(pt, obv).fail(onError);
 
-        $.when(pt, obv, medorder).done(function(patient, obv, medorder) {
+        $.when(pt, obv).done(function(patient, obv) {
           var byCodes = smart.byCodes(obv, 'code');
           var gender = patient.gender;
 
           var fname = '';
           var lname = '';
-		  var med_list= '';
+		//  var med_list= '';
 
           if (typeof patient.name[0] !== 'undefined') {
             fname = patient.name[0].given.join(' ');
