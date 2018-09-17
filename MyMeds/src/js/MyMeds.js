@@ -48,7 +48,7 @@
 		  var xml1 = fhirobj.objToXml(medorder);
 			var json1 = fhirobj.xmlToJson(xml1);
 			
-		p.med_lis= json1;
+		p.med_list= json1;
 		  
           var height = byCodes('8302-2');
           var systolicbp = getBloodPressureValue(byCodes('55284-4'),'8480-6');
@@ -141,6 +141,7 @@
     $('#diastolicbp').html(p.diastolicbp);
     $('#ldl').html(p.ldl);
     $('#hdl').html(p.hdl);
+	$('#med_list').html(p.med_list);
   };
 
 })(window);
