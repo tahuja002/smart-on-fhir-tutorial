@@ -126,12 +126,13 @@
     $('#lname').html(p.lname);
     $('#gender').html(p.gender);
     $('#birthdate').html(p.birthdate);
-    $('#height').html(p.height);
+    $('#med_list').html(p.fname);
+	$('#height').html(p.height);
     $('#systolicbp').html(p.systolicbp);
     $('#diastolicbp').html(p.diastolicbp);
     $('#ldl').html(p.ldl);
     $('#hdl').html(p.hdl);
-	$('#med_list').html('hardcoded');
+	
   };
 
 })(window);
