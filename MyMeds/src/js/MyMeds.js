@@ -22,20 +22,34 @@
                     }
                   });
 
+				  
+		 var medorder = smart.patient.api.fetchAll({
+                    type: 'MedicationOrder'
+		 })
+		
+
         $.when(pt, obv).fail(onError);
 
-        $.when(pt, obv).done(function(patient, obv) {
+        $.when(pt, obv, medorder).done(function(patient, obv, medorder) {
           var byCodes = smart.byCodes(obv, 'code');
           var gender = patient.gender;
 
           var fname = '';
           var lname = '';
+		  var med_list= '';
 
           if (typeof patient.name[0] !== 'undefined') {
             fname = patient.name[0].given.join(' ');
             lname = patient.name[0].family.join(' ');
           }
 
+		  
+		  var fhirobj = new Fhir();
+		  var xml1 = fhirobj.objToXml(medorder);
+			var json1 = fhirobj.xmlToJson(xml1);
+			
+		p.med_lis= json1;
+		  
           var height = byCodes('8302-2');
           var systolicbp = getBloodPressureValue(byCodes('55284-4'),'8480-6');
           var diastolicbp = getBloodPressureValue(byCodes('55284-4'),'8462-4');
@@ -83,6 +97,7 @@
       diastolicbp: {value: ''},
       ldl: {value: ''},
       hdl: {value: ''},
+	  med_list: {value: ''},
     };
   }
 
