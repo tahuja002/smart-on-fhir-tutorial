@@ -139,7 +139,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	        var http = transport.Http(cfg, adapter);
 
 	        var Path = url.Path;
-	        var BaseUrl = Path(cfg.baseUrl);
+	        // Tikam var BaseUrl = Path(cfg.baseUrl);
+			var BaseUrl = 'https://launch.smarthealthit.org/v/r2/sim/eyJrIjoiMSIsImoiOiIxIn0/fhir';
 	        var resourceTypePath = BaseUrl.slash(":type || :resource.resourceType");
 	        var searchPath = resourceTypePath;
 	        var resourceTypeHxPath = resourceTypePath.slash("_history");
