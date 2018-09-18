@@ -44,10 +44,10 @@
           }
  
  // get medication orders and display in table.
-		var fhirobj = new Fhir();
-		var xml1 = fhirobj.objToXml(medorder);
-		var json1 = fhirobj.xmlToJson(xml1);
-		p.med_list= json1;
+	//	var fhirobj = new Fhir();
+		//var xml1 = fhirobj.objToXml(medorder);
+		//var json1 = fhirobj.xmlToJson(xml1);
+		p.med_list= 'updating at row 50';
 
 			  
           var height = byCodes('8302-2');
