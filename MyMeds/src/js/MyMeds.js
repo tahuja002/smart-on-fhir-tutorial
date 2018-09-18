@@ -57,7 +57,7 @@
           var ldl = byCodes('2089-1');
 
           var p = defaultPatient();
-		  	p.med_list= 'updating at row 50';
+		 // 	p.med_list= 'updating at row 50';
           p.birthdate = patient.birthDate;
           p.gender = gender;
           p.fname = fname;
@@ -98,7 +98,7 @@
       diastolicbp: {value: ''},
       ldl: {value: ''},
       hdl: {value: ''},
-	  med_list: {value: ''},
+	  //med_list: {value: ''},
 	
     };
   }
@@ -143,7 +143,7 @@
     $('#diastolicbp').html(p.diastolicbp);
     $('#ldl').html(p.ldl);
     $('#hdl').html(p.hdl);
-	$('#med_list').html(p.med_list);
+	$('#med_list').html('huahahaha');
   };
 
 })(window);
