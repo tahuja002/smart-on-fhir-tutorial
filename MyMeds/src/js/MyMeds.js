@@ -22,9 +22,9 @@
                     }
                   });
 
-			var medorder = smart.patient.api.fetchAll({
-			type: 'MedicationOrder'
-			});
+	//		var medorder = smart.patient.api.fetchAll({
+	//			type: 'MedicationOrder'
+	//		});
                                 
 	  
 		
@@ -97,7 +97,7 @@
       diastolicbp: {value: ''},
       ldl: {value: ''},
       hdl: {value: ''},
-	  med_list: {value: ''},
+	  med_list: {value: ''}
 	
     };
   }
