@@ -29,7 +29,7 @@
                                 
 	  
 		
-        $.when(pt, obv, medorder).fail(onError);
+        $.when(pt, obv).fail(onError);
 
        $.when(pt, obv).done(function(patient, obv) {
           var byCodes = smart.byCodes(obv, 'code');
@@ -58,7 +58,7 @@
           var ldl = byCodes('2089-1');
 
           var p = defaultPatient();
-		 p.med_list= 'updating at row 74';
+		 p.med_list= 'updating at row 75';
           p.birthdate = patient.birthDate;
           p.gender = gender;
           p.fname = fname;
