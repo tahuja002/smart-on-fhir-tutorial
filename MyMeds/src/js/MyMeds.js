@@ -36,7 +36,7 @@
 
           var fname = '';
           var lname = '';
-		  var med_list= '';
+
 
           if (typeof patient.name[0] !== 'undefined') {
             fname = patient.name[0].given.join(' ');
@@ -98,7 +98,7 @@
       diastolicbp: {value: ''},
       ldl: {value: ''},
       hdl: {value: ''},
-	  med_list: {value: ''}
+	  med_list: {value: ''},
 	
     };
   }
