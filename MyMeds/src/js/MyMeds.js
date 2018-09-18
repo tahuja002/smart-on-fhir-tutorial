@@ -45,8 +45,8 @@
           }
  
  // get medication orders and display in table.
-		var fhirobj = new Fhir();
-		var xml1 = fhirobj.objToXml(medorder);
+	//	var fhirobj = new Fhir();
+	//	var xml1 = fhirobj.objToXml(medorder);
 	//	var json1 = fhirobj.xmlToJson(xml1);
 	
 
@@ -58,7 +58,7 @@
           var ldl = byCodes('2089-1');
 
           var p = defaultPatient();
-		 p.med_list= 'updating at row 65';
+		 p.med_list= 'updating at row 74';
           p.birthdate = patient.birthDate;
           p.gender = gender;
           p.fname = fname;
