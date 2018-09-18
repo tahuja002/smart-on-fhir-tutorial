@@ -47,7 +47,7 @@
 	//	var fhirobj = new Fhir();
 		//var xml1 = fhirobj.objToXml(medorder);
 		//var json1 = fhirobj.xmlToJson(xml1);
-		p.med_list= 'updating at row 50';
+	
 
 			  
           var height = byCodes('8302-2');
@@ -57,6 +57,7 @@
           var ldl = byCodes('2089-1');
 
           var p = defaultPatient();
+		  	p.med_list= 'updating at row 50';
           p.birthdate = patient.birthDate;
           p.gender = gender;
           p.fname = fname;
