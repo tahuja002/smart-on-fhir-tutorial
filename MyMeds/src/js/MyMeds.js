@@ -45,8 +45,8 @@
           }
  
  // get medication orders and display in table.
-	//	var fhirobj = new Fhir();
-	//	var xml1 = fhirobj.objToXml(medorder);
+		var fhirobj = new Fhir();
+		var xml1 = fhirobj.objToXml(medorder);
 	//	var json1 = fhirobj.xmlToJson(xml1);
 	
 
