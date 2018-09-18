@@ -58,7 +58,7 @@
           var ldl = byCodes('2089-1');
 
           var p = defaultPatient();
-		 p.med_list= 'updating at row 60';
+		 p.med_list= 'updating at row 65';
           p.birthdate = patient.birthDate;
           p.gender = gender;
           p.fname = fname;
