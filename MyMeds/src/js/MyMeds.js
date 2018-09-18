@@ -22,9 +22,9 @@
                     }
                   });
 
-	//		var medorder = smart.patient.api.fetchAll({
-	//			type: 'MedicationOrder'
-	//		});
+			var medorder = smart.patient.api.fetchAll({
+				type: 'MedicationOrder'
+			});
                                 
 	  
 		
@@ -43,10 +43,10 @@
             lname = patient.name[0].family.join(' ');
           }
  
- // get medication orders and display in table.
-	//	var fhirobj = new Fhir();
-		//var xml1 = fhirobj.objToXml(medorder);
-		//var json1 = fhirobj.xmlToJson(xml1);
+  get medication orders and display in table.
+		var fhirobj = new Fhir();
+		var xml1 = fhirobj.objToXml(medorder);
+		var json1 = fhirobj.xmlToJson(xml1);
 	
 
 			  
@@ -57,7 +57,7 @@
           var ldl = byCodes('2089-1');
 
           var p = defaultPatient();
-		 p.med_list= 'updating at row 50';
+		 p.med_list= 'updating at row 60';
           p.birthdate = patient.birthDate;
           p.gender = gender;
           p.fname = fname;
