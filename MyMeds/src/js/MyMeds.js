@@ -22,11 +22,15 @@
                     }
                   });
 
-				  
+			var medorder = smart.patient.api.fetchAll({
+			type: 'MedicationOrder'
+			});
+                                
+	  
 		
         $.when(pt, obv).fail(onError);
 
-        $.when(pt, obv ).done(function(patient, obv) {
+       $.when(pt, obv, medorder).done(function(patient, obv, medorder) {
           var byCodes = smart.byCodes(obv, 'code');
           var gender = patient.gender;
 
@@ -39,6 +43,12 @@
             lname = patient.name[0].family.join(' ');
           }
  
+ // get medication orders and display in table.
+		var fhirobj = new Fhir();
+		var xml1 = fhirobj.objToXml(medorder);
+		var json1 = fhirobj.xmlToJson(xml1);
+		p.med_list= json1;
+
 			  
           var height = byCodes('8302-2');
           var systolicbp = getBloodPressureValue(byCodes('55284-4'),'8480-6');
@@ -87,6 +97,7 @@
       diastolicbp: {value: ''},
       ldl: {value: ''},
       hdl: {value: ''},
+	  med_list: {value: ''},
 	
     };
   }
@@ -131,7 +142,7 @@
     $('#diastolicbp').html(p.diastolicbp);
     $('#ldl').html(p.ldl);
     $('#hdl').html(p.hdl);
-	$('#med_list').html('hardcoded value');
+	$('#med_list').html(p.med_list);
   };
 
 })(window);
