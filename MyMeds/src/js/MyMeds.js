@@ -43,7 +43,7 @@
             lname = patient.name[0].family.join(' ');
           }
  
-  get medication orders and display in table.
+ // get medication orders and display in table.
 		var fhirobj = new Fhir();
 		var xml1 = fhirobj.objToXml(medorder);
 		var json1 = fhirobj.xmlToJson(xml1);
