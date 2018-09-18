@@ -22,13 +22,14 @@
                     }
                   });
 
-			var medorder = smart.patient.api.fetchAll({
+		
+		var medorder = smart.patient.api.fetchAll({
 				type: 'MedicationOrder'
 			});
                                 
 	  
 		
-        $.when(pt, obv).fail(onError);
+        $.when(pt, obv, medorder).fail(onError);
 
        $.when(pt, obv).done(function(patient, obv) {
           var byCodes = smart.byCodes(obv, 'code');
@@ -44,9 +45,9 @@
           }
  
  // get medication orders and display in table.
-		var fhirobj = new Fhir();
-		var xml1 = fhirobj.objToXml(medorder);
-		var json1 = fhirobj.xmlToJson(xml1);
+	//	var fhirobj = new Fhir();
+	//	var xml1 = fhirobj.objToXml(medorder);
+	//	var json1 = fhirobj.xmlToJson(xml1);
 	
 
 			  
